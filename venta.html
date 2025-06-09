@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigeradores - Compra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/css/ventaStyle.css">
+</head>
+<body>
+<nav>
+    <div class="up">
+        <h1 class="logo">
+            <a href="./index.html">ELECTROHOUSE</a>
+        </h1>
+        <h1 class="registro">
+            <a href="/Registro.html">REGISTRO</a>
+        </h1>
+    </div>
+    <div class="nav-links">
+        <a href="/page">REFRIGERACION</a>
+        <a href="/page2.html">ELECTRODOMESTICOS</a>
+        <a href="/page3.html">CLIMATIZACION</a>
+    </div>
+</nav>
+<main class="container">
+    <section class="product-container">
+        <article class="product-card">
+            <figure>
+                <img src="https://www.lacuracao.pe/media/catalog/product/r/s/rs52b3000m9pe_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700" alt="Refrigerador Modelo 1" class="product-img">
+            </figure>
+            <section class="product-info">
+                <h3>Refrigerador Standard</h3>
+                <p>Refrigerador de 18 pies cúbicos con congelador superior, tecnología inverter y ahorro energético clase A++.</p>
+                <div class="remove-btn-container">
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </section>
+        </article>
+
+        <article class="product-card">
+            <figure>
+                <img src="https://www.lacuracao.pe/media/catalog/product/r/s/rs52b3000m9pe_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700" alt="Refrigerador Modelo 2" class="product-img">
+            </figure>
+            <section class="product-info">
+                <h3>Refrigerador French Door</h3>
+                <p>Modelo premium de 22 pies cúbicos con dispensador de agua y hielo, pantalla táctil y organización flexible.</p>
+                <div class="remove-btn-container">
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </section>
+        </article>
+
+        <article class="product-card">
+            <figure>
+                <img src="https://www.lacuracao.pe/media/catalog/product/r/s/rs52b3000m9pe_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700" alt="Refrigerador Modelo 3" class="product-img">
+            </figure>
+            <section class="product-info">
+                <h3>Refrigerador Side by Side</h3>
+                <p>Diseño elegante de 20 pies cúbicos con compartimentos iguales, control de humedad y modo vacaciones.</p>
+                <div class="remove-btn-container">
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </section>
+        </article>
+
+        <article class="product-card">
+            <figure>
+                <img src="https://www.lacuracao.pe/media/catalog/product/r/s/rs52b3000m9pe_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700 " alt="Refrigerador Modelo 3" class="product-img">
+            </figure>
+            <section class="product-info">
+                <h3>Refrigerador Side by Side</h3>
+                <p>Diseño elegante de 20 pies cúbicos con compartimentos iguales, control de humedad y modo vacaciones.</p>
+                <div class="remove-btn-container">
+                    <button class="remove-btn">Eliminar</button>
+                </div>
+            </section>
+        </article>
+    </section>
+
+    <section class="checkout-section">
+        <button class="buy-btn">Comprar todos los productos</button>
+    </section>
+
+    <!-- Modal -->
+    <div id="paymentModal" class="modal">
+        <article class="modal-content">
+            <button class="close" aria-label="Cerrar modal">&times;</button>
+            <h2>Proceso de Pago</h2>
+            <section class="modal-body">
+                <p>Está a punto de comprar 3 refrigeradores. Complete los datos para finalizar:</p>
+                <button class="buy-btn">Confirmar Compra</button>
+            </section>
+        </article>
+    </div>
+</main>
+
+<script>
+    const modal = document.getElementById("paymentModal");
+    const openModalBtn = document.querySelector(".checkout-section .buy-btn");
+    const closeModalBtn = modal.querySelector(".close");
+
+    openModalBtn.addEventListener("click", () => {
+        modal.classList.add("show");
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+        modal.classList.remove("show");
+    });
+
+    // Cierra el modal al hacer clic fuera del contenido
+    modal.addEventListener("click", (event) => {
+        const content = modal.querySelector(".modal-content");
+        if (!content.contains(event.target)) {
+            modal.classList.remove("show");
+        }
+    });
+</script>
+
+</body>
+</html>

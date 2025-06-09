@@ -26,6 +26,7 @@ nav {
   background-color: #eee;
   position: sticky;
   top: 0;
+  z-index: 2000;
 }
 
 .up {
@@ -97,6 +98,7 @@ h1.logo, h1.registro {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   text-align: center;
+  border: 0.5px solid black;
 }
 
 .Objetos:hover {
@@ -137,7 +139,7 @@ h1.logo, h1.registro {
 /* BOTONES */
 .Infop1 button, .Infop2 button, .Infop3 button, .Infop4 button {
   border: none;
-  background-color: #000;
+  background-color: #272727;
   color: white;
   padding: 10px 15px;
   cursor: pointer;

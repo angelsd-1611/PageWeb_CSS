@@ -1,0 +1,172 @@
+/* RESET GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: solid 0.5px #aaa;
+  background-color: #eee;
+  position: sticky;
+  top: 0;
+}
+
+.up {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+h1.logo, h1.registro {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* GRID DE PRODUCTOS */
+.Contenedor-de-Objetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 100vw;
+}
+
+/* OBJETOS / TARJETAS */
+.Objetos {
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.Objetos:hover {
+  transform: scale(1.05); /* Zoom al contenedor */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* IMÁGENES CON EFECTOS DIFERENTES POR CLASE */
+.Objetos img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* EFECTOS SOLO EN LA IMAGEN */
+.caja1 img:hover { transform: scale(0.9); }
+.caja2 img:hover { transform: rotate(5deg); }
+.caja3 img:hover { transform: translateY(-10px); }
+.caja4 img:hover { transform: skewX(5deg); }
+.caja5 img:hover { transform: skewY(5deg); }
+.caja6 img:hover { transform: rotate(-2deg) scale(1.05); }
+.caja7 img:hover { transform: perspective(300px) rotateY(10deg); }
+.caja8 img:hover { transform: perspective(300px) rotateX(10deg); }
+
+/* INFORMACIÓN DEL PRODUCTO */
+.Infop1, .Infop2, .Infop3, .Infop4 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PRECIO */
+.Precio {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* BOTONES */
+.Infop1 button, .Infop2 button, .Infop3 button, .Infop4 button {
+  border: none;
+  background-color: #000;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.Infop1 button:hover,
+.Infop2 button:hover,
+.Infop3 button:hover,
+.Infop4 button:hover {
+  background-color: #444;
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.button-rotate {
+  transition: transform 1s ease;
+  transform-origin: center;
+}
+
+.button-rotate.clicked {
+  transform: rotate(45deg);
+}
+

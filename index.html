@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ELECTROHOUSE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+
+  <nav>
+    <div class="up">
+      <h1 class="logo">
+        <a href="/tablas.html">ELECTROHOUSE</a>
+      </h1>
+      <h1 class="registro">
+        <a href="/Registro.html">REGISTRO</a>
+      </h1>
+    </div>
+    <div class="nav-links">
+      <a href="/page">REFRIGERACION</a>
+      <a href="/page2.html">ELECTRODOMESTICOS</a>
+      <a href="/page3.html">CLIMATIZACION</a>
+    </div>
+  </nav>
+
+  <ul class="Contenedor-de-Objetos">
+    <li class="Objetos caja caja1"> <!-- efecto: scale -->
+    <figure>
+      <img src="https://www.lacuracao.pe/media/catalog/product/r/s/rs52b3000m9pe_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700" width="300" alt="Producto 1">
+    </figure>
+    <div class="Infop1">
+      <h2>Refrigeradora Samsung Side by Side Gris 490Lt RS52B3000M9</h2>
+      <p class="Precio">S/2680</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+    <li class="Objetos caja caja2"> <!-- efecto: rotate -->
+    <figure><img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/sodimacPE/3525473_01/public" width="300" alt="Producto 2"></figure>
+    <div class="Infop2">
+      <h2>Refrigeradora Samsung 602 Lt Side by Side RS65R5691B4 Negro</h2>
+      <p class="Precio">S/9241</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+   <li class="Objetos caja caja3"> <!-- efecto: translate -->
+    <figure><img src="https://www.lacuracao.pe/media/catalog/product/r/s/rs60t5200b1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700" width="300" alt="Producto 3"></figure>
+    <div class="Infop3">
+      <h2>Refrigeradora Samsung 602 Lt Side by Side RS60T5200B1 Negro</h2>
+      <p class="Precio">S/3782</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+     <li class="Objetos caja caja4"> <!-- efecto: skew -->
+    <figure><img src="https://media.falabella.com/falabellaPE/133932397_01/w=800,h=800,fit=pad" width="300" alt="Producto 4"></figure>
+    <div class="Infop4">
+      <h2>Refrigeradora Samsung 300L Top Freezer RT29K500JS8 Plateado</h2>
+      <p class="Precio">S/7500</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+    <li class="Objetos caja caja5"> <!-- efecto: skewY -->
+    <figure><img src="https://media.falabella.com/falabellaPE/19743301_01/w=800,h=800,fit=pad" width="300" alt="Producto 5"></figure>
+    <div class="Infop1">
+      <h2>Refrigeradora LG GT31WPP 314L Door Cooling Top Mount Plateada</h2>
+      <p class="Precio">S/5482</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+    <li class="Objetos caja caja6"> <!-- efecto: skewX -->
+    <figure><img src="https://media.falabella.com/falabellaPE/18748757_01/w=800,h=800,fit=pad" width="300" alt="Producto 6"></figure>
+    <div class="Infop2">
+      <h2>Refrigeradora GB41WGT 403L Door Cooling Bottom Freezer Negro Mate LG</h2>
+      <p class="Precio">S/1241</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+     <li class="Objetos caja caja7"> <!-- efecto: translateX -->
+    <figure><img src="https://media.falabella.com/falabellaPE/20425761_1/w=1500,h=1500,fit=pad" width="300" alt="Producto 7"></figure>
+    <div class="Infop3">
+      <h2>Refrigeradora Gs66sxn 617lt Instaview Top Mount Plateado Lg</h2>
+      <p class="Precio">S/3782</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+
+    <li class="Objetos caja caja8"> <!-- efecto: translateY -->
+    <figure><img src="https://media.falabella.com/falabellaPE/17583148_1/w=1500,h=1500,fit=pad" width="300" alt="Producto 8"></figure>
+    <div class="Infop4">
+      <h2>Refrigeradora LM85SXD 679L InstaView French Door Negro LG</h2>
+      <p class="Precio">S/10000</p>
+      <button class="button-rotate" onclick="rotateAndRedirect(this)">Ordenar</button>
+    </div>
+  </li>
+</ul>
+
+  <footer>
+    <p>&copy; 2025 ElectroHouse. Todos los derechos reservados.</p>
+  </footer>
+  
+<script>
+  function rotateAndRedirect(button) {
+    button.classList.add("clicked");
+    setTimeout(() => {
+      window.location.href = "index.html"; // Cambia esto por tu ruta real si es diferente
+    }, 1000); // Espera 1 segundo para que se vea la animación
+  }
+</script>
+  </body>
+</html>
